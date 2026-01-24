@@ -174,12 +174,12 @@
     --width-small: 40px;
     --width-medium: 48px;
     --width-large: 56px;
-    --width-extra-large: 96px;
+    --width-extra-large: 80px;
     --height-extra-small: 32px;
     --height-small: 40px;
     --height-medium: 48px;
     --height-large: 56px;
-    --height-extra-large: 96px;
+    --height-extra-large: 80px;
 
     --header-height: 72px;
 }
@@ -527,6 +527,15 @@ html[dir="ltr"] .arrow-dir { transform: rotateY(180deg); }
     gap: var(--spacing-5);
 }
 
+.grid-2-base .column,
+.grid-3-base .column,
+.grid-4-base .column,
+.grid-5-base .column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+
 /* -------------------------------------------- *\
  * TYPOGRAPH
 \* -------------------------------------------- */
@@ -679,6 +688,34 @@ html[dir="ltr"] .arrow-dir { transform: rotateY(180deg); }
 }
 
 /**
+ * Avatars
+ */
+.avatar {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--outline);
+    display: grid;
+    place-items: center;
+    background-color: var(--surface);
+    color: var(--on-background-variant);
+}
+
+.avatar .img-avatar {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+}
+
+.avatar.medium {
+    min-width: var(--width-medium);
+    max-width: var(--width-medium);
+    min-height: var(--height-medium);
+    max-height: var(--height-medium);
+}
+
+/**
  * App bars
  */
 
@@ -727,6 +764,12 @@ html[dir="ltr"] .arrow-dir { transform: rotateY(180deg); }
     padding-inline: var(--spacing-6);
     min-height: var(--height-medium);
     max-height: var(--height-medium);
+}
+
+.btn.large {
+    padding-inline: var(--spacing-7);
+    min-height: var(--height-large);
+    max-height: var(--height-large);
 }
 
 .btn.outline {
@@ -1443,11 +1486,25 @@ html[dir="ltr"] .offcanvas.offcanvas-end { border-radius: 0 var(--radius-extra-l
 }
 
 /**
+ * Graduates
+ */
+.graduates img { min-height: max-content; }
+
+/**
+ * Topic
+ */
+.topic { background-color: var(--soft-primary); }
+
+.topic .title-sec { margin: 0; }
+
+/**
  * Contact Us
  */
 .contact-us {
     overflow: hidden;
     margin-block-end: -80px;
+    position: relative;
+    z-index: 10;
 }
 
 .contact-us .contact-us-contain {
