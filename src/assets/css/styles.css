@@ -1519,11 +1519,6 @@ html[dir="ltr"] .offcanvas.offcanvas-end { border-radius: 0 var(--radius-extra-l
     transition-property: border-color, transform;
 }
 
-.years .grid-3-base .card {
-    background-color: var(--background) !important;
-    padding-block: var(--spacing-6) !important;
-}
-
 /**
  * Courses
  */
