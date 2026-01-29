@@ -970,6 +970,11 @@ html[dir="ltr"] .arrow-dir { transform: rotateY(180deg); }
     --state-layer-bg: var(--on-background);
 }
 
+.card.tonal {
+    background-color: var(--soft-primary) !important; 
+    --state-layer-bg: var(--primary);
+}
+
 .card.course .card-body {
     margin-block-start: -24px;
     background-color: var(--surface);
@@ -1035,6 +1040,8 @@ html[dir="ltr"] .arrow-dir { transform: rotateY(180deg); }
 }
 
 .card .wrapper-block { gap: var(--spacing-3); }
+
+.card.tonal .btn { border-radius: var(--radius-small); }
 
 /**
  * Carousel
@@ -1509,6 +1516,11 @@ html[dir="ltr"] .offcanvas.offcanvas-end { border-radius: 0 var(--radius-extra-l
     box-shadow: var(--shadow-05);
     place-items: center;
 }
+
+/**
+ * Important Materials
+ */
+
 
 /**
  * Years
